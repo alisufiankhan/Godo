@@ -276,18 +276,15 @@ setInterval(displayRandomQuote, 86400000);
 
 // Function to update the visitor counter every second
 function updateCounter() {
-    // Using the countapi.xyz service to get the visitor count
-    fetch('https://api.countapi.xyz/hit/https://alisufiankhan.github.io/Godo/visits')
+    fetch('https://api.countapi.xyz/hit/alisufiankhan.github.io/Godo/visits')
         .then(response => response.json())
         .then(data => {
-            // Update the counter in the DOM
             document.getElementById('visitor-count').innerText = data.value;
         })
         .catch(error => console.log('Error fetching data:', error));
 }
-
 // Call the function every second (1000 ms)
 setInterval(updateCounter, 1000);
-
 // Call it immediately when the page loads
 updateCounter();
+
