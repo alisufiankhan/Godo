@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Godo</a>
+            <ul class="navbar-menu">
+                <li><a href="https://buymeacoffee.com/alisufian">Contact</a></li>
+                <li><a href="https://buymeacoffee.com/alisufian">Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="column left-column">
+            <h2>7-Day Progress</h2>
+            <div id="progress-report"></div>
+        </div>
+        <div class="column center-column">
+            <h2>To-Do List</h2>
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                <button type="submit" title="Add Task"><i class="fas fa-plus"></i></button>
+                <button type="button" id="voice-input" title="Voice Input"><i class="fas fa-microphone"></i></button>
+            </form>
+            <ul id="todo-list">
+                <li>
+                    <span>Sample Task</span>
+                    <button class="delete-btn" data-index="0" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                    <button class="edit-btn" data-index="0" title="Edit"><i class="fas fa-edit"></i></button>
+                    <button class="complete-btn" data-index="0" title="Complete"><i class="fas fa-check"></i></button>
+                </li>
+            </ul>
+        </div>
+        <div class="column right-column">
+            <h2>Set Alarm</h2>
+            <div class="alarm-container">
+                <input type="time" id="alarm-time" style="border: none; outline: none;">
+                <button id="set-alarm" style="border: none; outline: none;">Set Alarm</button>
+            </div>
+            <div id="alarm-list"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <div class="quote-box">
+        <p id="quote" class="quote-text"></p>
+        </div>
+
+        <div class="counter-container">
+            <p>Number of people using Godo</p>
+            <div class="counter" id="visitor-count">Loading...</div>
+        </div>
+
+
+
+
+        <iframe src="https://embeds.beehiiv.com/a662d3d1-b8b3-4997-bed8-46981c4aa4fe" data-test-id="beehiiv-embed" width="99%" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #000000; margin: 0; background-color: black;"></iframe>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://instagram.com/alis.code" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/aliscodes" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p>Made with ❤️ by Ali Sufian</p>
+        </div>
+    </footer>
+
+    <script src="Index.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</body>
+</html>
