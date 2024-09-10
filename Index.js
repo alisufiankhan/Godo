@@ -275,16 +275,21 @@ setInterval(displayRandomQuote, 86400000);
 
 
 // Function to update the visitor counter every second
-function updateCounter() {
-    fetch('https://api.countapi.xyz/hit/alisufiankhan.github.io/Godo/visits')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('visitor-count').innerText = data.value;
-        })
-        .catch(error => console.log('Error fetching data:', error));
-}
-// Call the function every second (1000 ms)
-setInterval(updateCounter, 1000);
-// Call it immediately when the page loads
-updateCounter();
+ function updateCounter() {
+            fetch('https://alisufiankhan.goatcounter.com/api/counters')
+                .then(response => response.json())
+                .then(data => {
+                    const totalVisits = data.total;
+                    document.getElementById('visitor-count').innerText = totalVisits;
+                })
+                .catch(error => {
+                    console.error('Error fetching visitor count:', error);
+                    document.getElementById('visitor-count').innerText = 'Error loading count';
+                });
+        }
 
+        // Call the function every second (1000 ms)
+        setInterval(updateCounter, 1000);
+
+        // Call it immediately when the page loads
+        updateCounter();
